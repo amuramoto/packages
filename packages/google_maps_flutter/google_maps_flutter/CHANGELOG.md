@@ -1,4 +1,7 @@
-## NEXT
+## 2.4.0
+* Adds implementation for `cloudMapId` parameter to support cloud-based maps styling.
+
+## 2.3.0
 
 * Aligns Dart and Flutter SDK constraints.
 

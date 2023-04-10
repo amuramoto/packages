@@ -123,7 +123,9 @@ class GoogleMap extends StatefulWidget {
     this.onCameraIdle,
     this.onTap,
     this.onLongPress,
-  }) : assert(initialCameraPosition != null);
+    this.cloudMapId,
+  })  : assert(initialCameraPosition != null),
+        super(key: key);
 
   /// Callback method for when the map is ready to be used.
   ///
@@ -281,6 +283,12 @@ class GoogleMap extends StatefulWidget {
   /// When this set is empty, the map will only handle pointer events for gestures that
   /// were not claimed by any other gesture recognizer.
   final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
+
+  /// Identifier that's associated with a specific cloud-based map style.
+  ///
+  /// See https://developers.google.com/maps/documentation/get-map-id
+  /// for more details.
+  final String? cloudMapId;
 
   /// Creates a [State] for this [GoogleMap].
   @override
@@ -552,5 +560,6 @@ MapConfiguration _configurationFromMapWidget(GoogleMap map) {
     indoorViewEnabled: map.indoorViewEnabled,
     trafficEnabled: map.trafficEnabled,
     buildingsEnabled: map.buildingsEnabled,
+    cloudMapId: map.cloudMapId,
   );
 }

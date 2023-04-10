@@ -1,3 +1,7 @@
+## 2.5.0
+
+* Adds implementation for `cloudMapId` parameter to support cloud-based map styling.
+
 ## 2.4.10
 
 * Bump RoboElectric dependency to 4.4.1 to support AndroidX.

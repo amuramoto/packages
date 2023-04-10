@@ -143,11 +143,7 @@ deleted_files:
     conflictFile.createSync(recursive: true);
     conflictFile.writeAsStringSync('''
 line1
-<<<<<<< /conflcit/conflict.file
 line2
-=======
-linetwo
->>>>>>> /var/folders/md/gm0zgfcj07vcsj6jkh_mp_wh00ff02/T/flutter_tools.4Xdep8/generatedTargetTemplatetlN44S/conflict/conflict.file
 line3
 ''', flush: true);
 

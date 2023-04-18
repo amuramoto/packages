@@ -18,7 +18,6 @@ import 'google_maps_controller_test.mocks.dart';
 
 // This value is used when comparing long~num, like
 // LatLng values.
-const double _acceptableDelta = 0.0000000001;
 const String _kCloudMapId = '000000000000000'; // Dummy map ID.
 
 @GenerateMocks(<Type>[], customMocks: <MockSpec<dynamic>>[

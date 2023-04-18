@@ -124,8 +124,7 @@ class GoogleMap extends StatefulWidget {
     this.onTap,
     this.onLongPress,
     this.cloudMapId,
-  })  : assert(initialCameraPosition != null),
-        super(key: key);
+  }) : assert(initialCameraPosition != null);
 
   /// Callback method for when the map is ready to be used.
   ///

@@ -23,7 +23,7 @@ class MapIdPage extends GoogleMapExampleAppPage {
 }
 
 class MapIdBody extends StatefulWidget {
-  const MapIdBody({Key? key}) : super(key: key);
+  const MapIdBody({super.key});
 
   @override
   State<StatefulWidget> createState() => MapIdBodyState();

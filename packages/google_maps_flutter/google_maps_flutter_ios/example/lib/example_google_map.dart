@@ -248,7 +248,7 @@ class ExampleGoogleMap extends StatefulWidget {
     this.onTap,
     this.onLongPress,
     this.cloudMapId,
-  }) : super(key: key);
+  });
 
   /// Callback method for when the map is ready to be used.
   ///

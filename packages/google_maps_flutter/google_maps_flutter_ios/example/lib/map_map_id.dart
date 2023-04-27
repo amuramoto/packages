@@ -85,13 +85,6 @@ class MapIdBodyState extends State<MapIdBody> {
             'Press to use specified map Id',
           ),
         ),
-      ),
-      const Padding(
-        padding: EdgeInsets.all(10.0),
-        child:
-            Text('On iOS, cloud based map styling works only if iOS platform '
-                'version 12 or above is targeted in project Podfile. '
-                "Run command 'pod update GoogleMaps' to update plugin"),
       )
     ];
 

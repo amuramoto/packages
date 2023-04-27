@@ -55,6 +55,4 @@ interface GoogleMapOptionsSink {
   void setInitialCircles(Object initialCircles);
 
   void setInitialTileOverlays(List<Map<String, ?>> initialTileOverlays);
-
-  void setMapId(String mapId);
 }

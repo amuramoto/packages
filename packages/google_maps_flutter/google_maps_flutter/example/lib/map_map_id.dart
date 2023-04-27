@@ -108,21 +108,14 @@ class MapIdBodyState extends State<MapIdBody> {
               'Press to use specified map Id',
             ),
           )),
-      if (Platform.isAndroid)
+      if (Platform.isAndroid &&
+          _initializedRenderer != AndroidMapRenderer.latest)
         Padding(
           padding: const EdgeInsets.all(10.0),
           child: Text(
               'On Android, Cloud-based maps styling only works with "latest" renderer.\n\n'
               'Current initialized renderer is "${_getInitializedsRendererType()}".'),
         ),
-      if (Platform.isIOS)
-        const Padding(
-          padding: EdgeInsets.all(10.0),
-          child:
-              Text('On iOS, cloud based map styling works only if iOS platform '
-                  'version 12 or above is targeted in project Podfile. '
-                  "Run command 'pod update GoogleMaps' to update plugin"),
-        )
     ];
 
     return Column(

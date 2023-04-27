@@ -871,11 +871,6 @@ final class GoogleMapController
     }
   }
 
-  @Override
-  public void setMapId(String mapId) {
-    Log.e(TAG, "Cannot change MapId after map is initialized.");
-  }
-
   private void updateInitialTileOverlays() {
     tileOverlaysController.addTileOverlays(initialTileOverlays);
   }

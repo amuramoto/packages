@@ -85,6 +85,8 @@ gmaps.MapOptions _configurationAndStyleToGmapsOptions(
 
   options.styles = styles;
 
+  options.mapId = configuration.cloudMapId;
+
   return options;
 }
 
@@ -119,14 +121,6 @@ gmaps.MapOptions _applyInitialPosition(
     options.center = gmaps.LatLng(
         initialPosition.target.latitude, initialPosition.target.longitude);
   }
-  return options;
-}
-
-gmaps.MapOptions _applyMapId(
-  String? mapId,
-  gmaps.MapOptions options,
-) {
-  options.mapId = mapId;
   return options;
 }
 

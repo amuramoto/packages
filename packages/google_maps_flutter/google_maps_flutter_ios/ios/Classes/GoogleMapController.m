@@ -81,8 +81,9 @@
   GMSMapView *mapView;
 
 #if defined(__IPHONE_12_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_12_0
-  if (args[@"options"][@"cloudMapId"]) {
-    GMSMapID *mapID = [GMSMapID mapIDWithIdentifier:args[@"options"][@"cloudMapId"]];
+  NSString *cloudMapId = args[@"options"][@"cloudMapId"];
+  if (cloudMapId) {
+    GMSMapID *mapID = [GMSMapID mapIDWithIdentifier:cloudMapId];
     mapView = [GMSMapView mapWithFrame:frame mapID:mapID camera:camera];
   } else {
     mapView = [GMSMapView mapWithFrame:frame camera:camera];

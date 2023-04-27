@@ -109,12 +109,13 @@ class MapIdBodyState extends State<MapIdBody> {
               'Press to use specified map Id',
             ),
           )),
-      Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Text(
-            'On Android, Cloud-based maps styling only works with "latest" renderer.\n\n'
-            'Current initialized renderer is "${_getInitializedsRendererType()}".'),
-      ),
+      if (_initializedRenderer != AndroidMapRenderer.latest)
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Text(
+              'On Android, Cloud-based maps styling only works with "latest" renderer.\n\n'
+              'Current initialized renderer is "${_getInitializedsRendererType()}".'),
+        ),
     ];
 
     return Column(

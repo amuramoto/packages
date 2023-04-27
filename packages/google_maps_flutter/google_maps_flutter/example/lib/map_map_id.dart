@@ -108,7 +108,8 @@ class MapIdBodyState extends State<MapIdBody> {
               'Press to use specified map Id',
             ),
           )),
-      if (Platform.isAndroid)
+      if (Platform.isAndroid &&
+          _initializedRenderer != AndroidMapRenderer.latest)
         Padding(
           padding: const EdgeInsets.all(10.0),
           child: Text(

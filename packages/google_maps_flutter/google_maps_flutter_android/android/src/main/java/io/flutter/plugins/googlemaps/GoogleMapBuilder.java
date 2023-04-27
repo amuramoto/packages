@@ -58,7 +58,7 @@ class GoogleMapBuilder implements GoogleMapOptionsSink {
   public void setMapId(String mapId) {
     options.mapId(mapId);
   }
-  
+
   @Override
   public void setCompassEnabled(boolean compassEnabled) {
     options.compassEnabled(compassEnabled);

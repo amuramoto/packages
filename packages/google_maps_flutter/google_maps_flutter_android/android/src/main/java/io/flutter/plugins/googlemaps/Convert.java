@@ -377,10 +377,6 @@ class Convert {
     if (buildingsEnabled != null) {
       sink.setBuildingsEnabled(toBoolean(buildingsEnabled));
     }
-    final Object cloudMapId = data.get("cloudMapId");
-    if (cloudMapId != null) {
-      sink.setMapId(toString(cloudMapId));
-    }
   }
 
   /** Returns the dartMarkerId of the interpreted marker. */

@@ -378,7 +378,7 @@ class Convert {
       sink.setBuildingsEnabled(toBoolean(buildingsEnabled));
     }
     final Object cloudMapId = data.get("cloudMapId");
-    if (buildingsEnabled != null) {
+    if (cloudMapId != null) {
       sink.setMapId(toString(cloudMapId));
     }
   }

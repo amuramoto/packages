@@ -1,10 +1,11 @@
-## 0.4.2
+## 0.4.1
 
 * Adds implementation for `cloudMapId` parameter to support cloud-based maps styling.
 
-## 0.4.1
+## 0.4.0+8
 
 * Updates minimum Flutter version to 3.3.
+* Allows marker position updates. Issue [#83467](https://github.com/flutter/flutter/issues/83467).
 
 ## 0.4.0+7
 

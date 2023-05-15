@@ -1,6 +1,23 @@
 ## 2.5.0
 
 * Adds implementation for `cloudMapId` parameter to support cloud-based map styling.
+* Updates minimum supported SDK version to Flutter 3.3/Dart 2.18.
+
+## 2.4.14
+
+* Updates gradle, AGP and fixes some lint errors.
+
+## 2.4.13
+
+* Fixes compatibility with AGP versions older than 4.2.
+
+## 2.4.12
+
+* Fixes Java warnings.
+
+## 2.4.11
+
+* Adds a namespace for compatibility with AGP 8.0.
 
 ## 2.4.10
 

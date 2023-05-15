@@ -1,3 +1,15 @@
+## NEXT
+
+* Updates minimum supported SDK version to Flutter 3.3/Dart 2.18.
+
+## 2.2.2
+
+* Updates minimum iOS version to 11.
+
+## 2.2.1
+
+* Updates pigeon for null value handling fixes.
+
 ## 2.2.0
 
 * Adds `getAllWithPrefix` and `clearWithPrefix` methods.

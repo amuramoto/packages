@@ -79,18 +79,21 @@
   GMSCameraPosition *camera =
       [FLTGoogleMapJSONConversions cameraPostionFromDictionary:args[@"initialCameraPosition"]];
   GMSMapView *mapView;
-
-#if defined(__IPHONE_12_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_12_0
+  id mapID = nil;
   NSString *cloudMapId = args[@"options"][@"cloudMapId"];
+
   if (cloudMapId) {
-    GMSMapID *mapID = [GMSMapID mapIDWithIdentifier:cloudMapId];
+    Class mapIDClass = NSClassFromString(@"GMSMapID");
+    if (mapIDClass && [mapIDClass respondsToSelector:@selector(mapIDWithIdentifier:)]) {
+      mapID = [mapIDClass mapIDWithIdentifier:cloudMapId];
+    }
+  }
+
+  if (mapID && [GMSMapView respondsToSelector:@selector(mapWithFrame:mapID:camera:)]) {
     mapView = [GMSMapView mapWithFrame:frame mapID:mapID camera:camera];
   } else {
     mapView = [GMSMapView mapWithFrame:frame camera:camera];
   }
-#else
-  mapView = [GMSMapView mapWithFrame:frame camera:camera];
-#endif
 
   return [self initWithMapView:mapView viewIdentifier:viewId arguments:args registrar:registrar];
 }

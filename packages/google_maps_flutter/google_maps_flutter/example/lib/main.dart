@@ -86,7 +86,8 @@ void main() {
 
 Completer<AndroidMapRenderer?>? _initializedRendererCompleter;
 
-/// Initializes map renderer to with `latest` renderer type for Android platform.
+/// Initializes map renderer to the `latest` renderer type for Android platform.
+/// 
 /// The renderer must be requested before creating GoogleMap instances,
 /// as the renderer can be initialized only once per application context.
 Future<AndroidMapRenderer?> initializeMapRenderer() async {

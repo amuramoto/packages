@@ -1,8 +1,13 @@
 ## 2.4.0
 * Adds implementation for `cloudMapId` parameter to support cloud-based maps styling.
 
-## 2.3.0
+## 2.2.8
 
+* Fixes unawaited_futures violations.
+
+## 2.2.7
+
+* Removes obsolete null checks on non-nullable values.
 * Updates minimum supported SDK version to Flutter 3.3/Dart 2.18.
 
 ## 2.2.6

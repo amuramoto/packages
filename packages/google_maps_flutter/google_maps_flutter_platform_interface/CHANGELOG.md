@@ -1,8 +1,9 @@
-## 2.4.0
+## 2.3.0
 * Adds a `cloudMapId` parameter to support cloud-based map styling.
 
-## 2.3.0
+## 2.2.7
 
+* Removes obsolete null checks on non-nullable values.
 * Updates minimum Flutter version to 3.3.
 * Aligns Dart and Flutter SDK constraints.
 

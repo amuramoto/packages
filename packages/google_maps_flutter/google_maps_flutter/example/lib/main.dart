@@ -87,7 +87,7 @@ void main() {
 Completer<AndroidMapRenderer?>? _initializedRendererCompleter;
 
 /// Initializes map renderer to the `latest` renderer type for Android platform.
-/// 
+///
 /// The renderer must be requested before creating GoogleMap instances,
 /// as the renderer can be initialized only once per application context.
 Future<AndroidMapRenderer?> initializeMapRenderer() async {
@@ -104,9 +104,10 @@ Future<AndroidMapRenderer?> initializeMapRenderer() async {
   final GoogleMapsFlutterPlatform mapsImplementation =
       GoogleMapsFlutterPlatform.instance;
   if (mapsImplementation is GoogleMapsFlutterAndroid) {
-    mapsImplementation.initializeWithRenderer(AndroidMapRenderer.latest).then(
-        (AndroidMapRenderer initializedRenderer) =>
-            completer.complete(initializedRenderer));
+    unawaited(mapsImplementation
+        .initializeWithRenderer(AndroidMapRenderer.latest)
+        .then((AndroidMapRenderer initializedRenderer) =>
+            completer.complete(initializedRenderer)));
   } else {
     completer.complete(null);
   }

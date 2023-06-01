@@ -1,6 +1,13 @@
-## 0.4.1
+## 0.5.1
 
 * Adds implementation for `cloudMapId` parameter to support cloud-based maps styling.
+  
+## 0.5.0
+
+* **BREAKING CHANGE:** Fires a `MapStyleException` when an invalid JSON is used
+  in `setMapStyle` (was `FormatException` previously).
+* Implements a `GoogleMapsInspectorPlatform` to allow integration tests to inspect
+  parts of the internal state of a map.
 
 ## 0.4.0+9
 

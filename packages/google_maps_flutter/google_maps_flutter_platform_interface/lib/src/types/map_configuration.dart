@@ -288,5 +288,5 @@ class MapConfiguration {
         trafficEnabled,
         buildingsEnabled,
         cloudMapId,
-      );
+      ]);
 }
